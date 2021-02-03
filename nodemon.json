@@ -1,0 +1,6 @@
+{
+  "watch": ["src", ".qat", "qat.config.js"],
+  "ext": ".ts,.js",
+  "ignore": [],
+  "exec": "ts-node ./src/index.ts"
+}

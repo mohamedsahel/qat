@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "lib": ["esnext"],
+    "allowJs": true,
+    "outDir": "lib",
+    "rootDir": "src",
+    // "strict": true,
+    // "noImplicitAny": false,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+  },
+  "exclude": ["node_modules", "lib", "./src/__tests__"],
+  "include": ["./src/**/*"],
+}

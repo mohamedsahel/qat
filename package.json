@@ -1,0 +1,59 @@
+{
+  "name": "qat",
+  "version": "0.0.0",
+  "description": "Quickly automate coding tasks",
+  "keywords": [
+    "automate coding",
+    "automate tasks",
+    "quick task",
+    "automate",
+    "node cli",
+    "cli"
+  ],
+  "homepage": "https://github.com/mohamedsahel/qat#readme",
+  "bugs": {
+    "url": "https://github.com/mohamedsahel/qat/issues"
+  },
+  "main": "lib/index.js",
+  "bin": "lib/index.js",
+  "preferGlobal": true,
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "start": "nodemon",
+    "build": "tsc",
+    "prepare": "npm run build",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "prepublishOnly": "npm test",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mohamedsahel/qat.git"
+  },
+  "author": "Mohamed Sahel <sahelmohamed55@gmail.com> (www.mohamedsahel.com)",
+  "license": "MIT",
+  "private": false,
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "engineStrict": true,
+  "dependencies": {
+    "chokidar": "^3.4.3",
+    "inquirer": "^7.3.3",
+    "is-valid-path": "^0.1.1"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^7.3.1",
+    "@types/jest": "^26.0.19",
+    "@types/node": "^14.14.14",
+    "jest": "^26.6.3",
+    "nodemon": "^2.0.6",
+    "prettier": "^2.2.1",
+    "ts-jest": "^26.4.4",
+    "ts-node": "^9.1.1",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.1.3"
+  }
+}
