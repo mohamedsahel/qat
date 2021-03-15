@@ -1,4 +1,5 @@
 src
+.qat
 jestconfig.json
 tsconfig.json
 tslint.json

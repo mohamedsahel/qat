@@ -9,8 +9,8 @@
     // "strict": true,
     // "noImplicitAny": false,
     "esModuleInterop": true,
-    "resolveJsonModule": true,
+    "resolveJsonModule": true
   },
   "exclude": ["node_modules", "lib", "./src/__tests__"],
-  "include": ["./src/**/*"],
+  "include": ["./src/**/*"]
 }
