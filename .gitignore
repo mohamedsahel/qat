@@ -1,3 +1,4 @@
 node_modules/
 /lib
 qat.config.js
+.qat

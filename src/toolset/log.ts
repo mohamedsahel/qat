@@ -1,5 +1,3 @@
-
-
 const colors: any = {
   red: '\x1b[31m',
   green: '\x1b[32m',
@@ -7,31 +5,22 @@ const colors: any = {
   blue: '\x1b[34m',
 }
 
-type LogType = (text: any, status?: 'default' | 'success' | 'info' | 'warning' | 'error' | undefined) => void
-
-const log: LogType = (text, status = 'default') => {
-  switch(status) {
-    case 'default' :
-      console.log(text)
-      break;
-
-    case 'success' :
-      console.log(colors.green + '%s\x1b[0m', text)
-      break;
-
-    case 'info' :
-      console.log(colors.blue + '%s\x1b[0m', text)
-      break;
-
-    case 'warning' :
-      console.log(colors.yellow + '%s\x1b[0m', text)
-      break;
-
-    case 'error' :
-      console.log(colors.red + '%s\x1b[0m', text)
-      break;
-
-  }
+const logTemp = (args, color?) => {
+  args.forEach((arg) => {
+    if (color) {
+      console.log(color, arg)
+    } else {
+      console.log(args)
+    }
+  })
 }
+
+const log = (...args) => logTemp(args)
+
+log.error = (...args) => logTemp(args, colors.red + '%s\x1b[0m')
+
+log.info = (...args) => logTemp(args, colors.green + '%s\x1b[0m')
+
+log.warn = (...args) => logTemp(args, colors.yellow + '%s\x1b[0m')
 
 export default log

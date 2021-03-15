@@ -8,7 +8,7 @@ const escapeRegExp = (input: string): string => {
 }
 
 
-const applyTemplate: applyTemplateType = (template, variables, marks) => {
+const applyTemplate: applyTemplateType = (template, variables, marks?) => {
   let start, end
 
   if(marks?.length === 1) {

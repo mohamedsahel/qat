@@ -3,13 +3,11 @@ import { exec } from 'child_process'
 
 import { log } from '../toolset'
 
-
 export const resolvePath = (...paths: string[]) => PATH.resolve(process.cwd(), ...paths)
 
 export const setCwd = (path: string) => {
   process.chdir(path)
 }
-
 
 // helper fonction for excuting command line commands
 export const execCommand = (cmd: string) => {
@@ -26,7 +24,7 @@ export const execCommand = (cmd: string) => {
 // error handler
 export const handleError = (topic: string) => {
   return (error?: string) => {
-    log(`Error: ${topic} \n`, 'error')
+    log.error(`Error: ${topic} \n`)
     process.exit()
   }
 }
